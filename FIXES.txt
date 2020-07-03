@@ -1,0 +1,40 @@
+## **FIX for Live browser updates**
+
+1. Add the following to 'gulpfile.js' to fix live browser updates and img-compression
+
+- // **FIX for Live browser updates**
+  gulp.task('watch', function () {
+    return gulp.watch(['./src/**/*.*'], ['server-reload']);
+  });
+
+
+## FIX for .jpg img compression
+
+1. Run the following in git bash in project folder:
+
+- npm install imagemin-mozjpeg
+
+
+2. Add the following to dependencies in 'gulpfile.js' 
+
+- const imageminMozjpeg = require('imagemin-mozjpeg');
+
+
+3. Update the following section in gulpfile.js to the below code:
+
+- gulp.task('img-compression', function() {
+  gulp.src('./img/*')
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.jpegtran({progressive: true}),
+      imageminMozjpeg({quality: 75, progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+      imagemin.svgo({
+        plugins: [
+          {removeViewBox: true},
+          {cleanupIDs: false}
+        ]
+      })
+    ]))
+    .pipe(gulp.dest('./dist/img'));
+});

@@ -1,0 +1,29 @@
+## Skip the first 3 steps if you have used Node.js, Git Bash, and GULP on this machine before.
+  Skip step 4 if you have downloaded MDB-Gulp on this machine already.
+
+1. install Node.js
+
+2. install Git BASH
+
+3. open Git BASH --> type: npm install@gulp4.0.2 -g
+
+4. download and unzip MDB-Gulp Package 
+
+
+5. create a working copy of MDB-Gulp Package in desired project location 
+
+----------------------------
+
+6. navigate to project folder and click: Git BASH here
+
+7. type: npm init --> complete npm project setup
+
+8. type: npm install --save-dev gulp
+
+9. type: npm install --save-dev gulp-sass gulp-autoprefixer gulp-cssmin browser-sync gulp-concat gulp-minify gulp-rename gulp-imagemin
+
+10. to Launch, type: gulp mdb-go
+
+----------------------------
+
+11. refer to GULP_FIXES-for-out-of-the-box.txt for browser-sync and jpg compression fixes.
