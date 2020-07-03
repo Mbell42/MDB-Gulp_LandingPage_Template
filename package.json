@@ -1,5 +1,5 @@
 {
-  "name": "gulp-tutorial",
+  "name": "mdb-gulp-landingpage-template",
   "version": "4.19.1",
   "main": "dist/js/mdb.js",
   "scripts": {
@@ -30,7 +30,8 @@
     "gulp-sass": "^4.1.0"
   },
   "dependencies": {
-    "@babel/core": "^7.3.3"
+    "@babel/core": "^7.3.3",
+    "imagemin-mozjpeg": "^9.0.0"
   },
   "description": "learning to use mdb Gulp",
   "keywords": [
