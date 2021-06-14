@@ -1,4 +1,4 @@
-# MDB-Gulp_LandingPage_Template
+# practice-MDB-Gulp_LandingPage_Template
 
 ## Description
 
